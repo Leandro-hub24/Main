@@ -285,6 +285,10 @@ function valorInput(i, id) {
         tot -= parseInt(catalogo[i].precio, 10)
         total.innerHTML = `$${tot}`
     }
+
+    if (b == "0") {
+        quitarCard(i, id)
+    }
 }
 
 function quitarCard(i, id) {
