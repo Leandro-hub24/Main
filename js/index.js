@@ -186,8 +186,8 @@ function editarCarrito(id) {
     let b = document.getElementById(`precio${id}`).innerHTML
     let c = 0
     c = parseInt(b, 10)
-    let d = parseInt(catalogo[id-1].precio, 10)
-    c+=d
+    let d = parseInt(catalogo[id - 1].precio, 10)
+    c += d
     document.getElementById(`precio${id}`).innerHTML = c
 }
 
@@ -197,7 +197,7 @@ function agregarCarrito(id) {
     let i = 0
     while (i < catalogo.length) {
         if (catalogo[i].id == id) {
-            cardsCa.innerHTML += `<div class="cardCa" id="cardCa${id}">
+            /* cardsCa.innerHTML += `<div class="cardCa" id="cardCa${id}">
             <img id="imagen" src="${catalogo[i].urlImg}" alt="">
             <div class="derecha">
                 <p id="titulo">${catalogo[i].titulo}</p>
@@ -210,7 +210,54 @@ function agregarCarrito(id) {
                     <p id="cant">Cantidad: <input type="number" class="inputCard" id="cantidadCard${id}" /></p>
                 </div>
             </div>
-        </div>`
+        </div>` */
+            const cardCa = document.createElement("div")
+            cardCa.classList.add("cardCa")
+            cardCa.setAttribute("id", `cardCa${id}`)
+            const img = document.createElement("img")
+            img.setAttribute("id", "imagen")
+            img.setAttribute("src", `${catalogo[i].urlImg}`)
+            const derecha = document.createElement("div")
+            derecha.classList.add("derecha")
+            const parrafo1 = document.createElement("p")
+            parrafo1.setAttribute("id", "titulo")
+            parrafo1.innerHTML = `${catalogo[i].titulo}`
+            const linea = document.createElement("hr")
+            const inferiorCa = document.createElement("div")
+            inferiorCa.classList.add("inferiorCa")
+            const parrafo2 = document.createElement("p")
+            parrafo2.setAttribute("id", "precio")
+            parrafo2.innerHTML = "$"
+            const span1 = document.createElement("span")
+            span1.setAttribute("id", `precio${id}`)
+            span1.innerHTML = `${catalogo[i].precio}`
+            const span2 = document.createElement("span")
+            span2.classList.add("material-symbols-outlined")
+            span2.setAttribute("onclick", "quitarCard()")
+            span2.innerHTML = "cancel"
+            const parrafo3 = document.createElement("p")
+            parrafo3.setAttribute("id", "cant")
+            parrafo3.innerHTML = "Cantidad: "
+            const input = document.createElement("input")
+            input.setAttribute("type", "number")
+            input.setAttribute("id", `cantidadCard${id}`)
+            input.setAttribute("min", "0")
+            input.setAttribute("max", "15")
+
+            parrafo2.appendChild(span1)
+            inferiorCa.appendChild(parrafo2)
+            inferiorCa.appendChild(span2)
+            parrafo3.appendChild(input)
+            inferiorCa.appendChild(parrafo3)
+
+            derecha.appendChild(parrafo1)
+            derecha.appendChild(linea)
+            derecha.appendChild(inferiorCa)
+
+            cardCa.appendChild(img)
+            cardCa.appendChild(derecha)
+
+            cardsCa.appendChild(cardCa)
             break
         }
         i++
@@ -232,3 +279,58 @@ function sumarCarrito(id) {
     }
 }
 
+function creaCard(list, i) {
+    const cardCa = document.createElement("div")
+    cardCa.classList.add("cardCa")
+    cardCa.setAttribute("id", `cardCa${id}`)
+    const img = document.createElement("img")
+    img.setAttribute("id", "imagen")
+    img.setAttribute("src", `${catalogo[i].urlImg}`)
+    const derecha = document.createElement("div")
+    derecha.classList.add("derecha")
+    const parrafo1 = document.createElement("p")
+    parrafo1.setAttribute("id", "titulo")
+    parrafo1.innerHTML = `${catalogo[i].titulo}`
+    const linea = document.createElement("hr")
+    const inferiorCa = document.createElement("div")
+    inferiorCa.classList.add("inferiorCa")
+    const parrafo2 = document.createElement("p")
+    parrafo2.setAttribute("id", "precio")
+    parrafo2.innerHTML = "$"
+    const span1 = document.createElement("span")
+    span1.setAttribute("id", `precio${id}`)
+    span1.innerHTML = `${catalogo[i].precio}`
+    const span2 = document.createElement("span")
+    span2.classList.add("material-symbols-outlined")
+    span2.setAttribute("onclick", "quitarCard()")
+    span2.innerHTML = "cancel"
+    const parrafo3 = document.createElement("p")
+    parrafo3.setAttribute("id", "cant")
+    parrafo3.innerHTML = "Cantidad: "
+    const input = document.createElement("input")
+    input.setAttribute("type", "number")
+    input.setAttribute("id", `cantidadCard${id}`)
+    input.setAttribute("min", "0")
+    input.setAttribute("max", "15")
+
+    parrafo2.appendChild(span1)
+    inferiorCa.appendChild(parrafo2)
+    inferiorCa.appendChild(span2)
+    parrafo3.appendChild(input)
+    inferiorCa.appendChild(parrafo3)
+
+    derecha.appendChild(parrafo1)
+    derecha.appendChild(linea)
+    derecha.appendChild(inferiorCa)
+
+    cardCa.appendChild(img)
+    cardCa.appendChild(derecha)
+
+    cardBody.appendChild(boton)
+    cardBody.appendChild(p1)
+    cardBody.appendChild(p2)
+    card.appendChild(img)
+    card.appendChild(cardBody)
+
+    return card
+}
