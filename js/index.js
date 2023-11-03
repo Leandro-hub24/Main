@@ -266,19 +266,18 @@ function valorInput(i, id) {
     let a = parseInt(catalogo[i].precio, 10)
     let b = parseInt(document.getElementById(`cantidadCard${id}`).value, 10)
     let d = a * b
-    let c = parseInt(document.getElementById((`precio${id}`).innerHTML), 10)
+    let c = document.getElementById(`precio${id}`).innerHTML
+    let e = parseInt(c)
     document.getElementById(`precio${id}`).innerHTML = d
-    if (b > 1) {
-        d = d - a
-    }
-
 
     let q = document.getElementById(`precio${id}`).innerHTML
     let w = parseInt(q, 10)
+    console.log(w)
+    console.log(e)
     if (w > c) {
         ca++
         cant.innerHTML = ca
-        tot += d
+        tot += parseInt(catalogo[i].precio, 10)
         total.innerHTML = `$${tot}`
     } else {
         ca--
