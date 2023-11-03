@@ -202,6 +202,15 @@ section {
     text-align: center;
 }
 
+#close {
+    text-align: left;
+    position: absolute;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
 .showCarrito {
     clip-path: inset(0 0 0 0);
     -webkit-clip-path: inset(0 0 0 0);
@@ -273,7 +282,7 @@ section {
 }
 
 .inputCard {
-    width: 40px;
+    width: 35px;
 }
 
 .total {

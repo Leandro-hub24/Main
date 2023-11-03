@@ -170,13 +170,8 @@ function cantidadCarrito(id) {
         editarCarrito(id)
     } else {
         agregarCarrito(id)
-        inputValor(id)
     }
     sumarCarrito(id)
-}
-
-function inputValor(id) {
-    document.getElementById(`cantidadCard${id}`).value = 1
 }
 
 function editarCarrito(id) {
@@ -233,16 +228,19 @@ function agregarCarrito(id) {
             span1.innerHTML = `${catalogo[i].precio}`
             const span2 = document.createElement("span")
             span2.classList.add("material-symbols-outlined")
-            span2.setAttribute("onclick", "quitarCard()")
+            span2.setAttribute("onclick", `quitarCard(${i},${id})`)
             span2.innerHTML = "cancel"
             const parrafo3 = document.createElement("p")
             parrafo3.setAttribute("id", "cant")
             parrafo3.innerHTML = "Cantidad: "
             const input = document.createElement("input")
+            input.classList.add("inputCard")
             input.setAttribute("type", "number")
+            input.setAttribute("onchange", `valorInput(${i},${id})`)
             input.setAttribute("id", `cantidadCard${id}`)
             input.setAttribute("min", "0")
             input.setAttribute("max", "15")
+            input.setAttribute("value", "1")
 
             parrafo2.appendChild(span1)
             inferiorCa.appendChild(parrafo2)
@@ -264,6 +262,43 @@ function agregarCarrito(id) {
     }
 }
 
+function valorInput(i, id) {
+    let a = parseInt(catalogo[i].precio, 10)
+    let b = parseInt(document.getElementById(`cantidadCard${id}`).value, 10)
+    let d = a * b
+    let c = parseInt(document.getElementById((`precio${id}`).innerHTML), 10)
+    document.getElementById(`precio${id}`).innerHTML = d
+    if (b > 1) {
+        d = d - a
+    }
+
+
+    let q = document.getElementById(`precio${id}`).innerHTML
+    let w = parseInt(q, 10)
+    if (w > c) {
+        ca++
+        cant.innerHTML = ca
+        tot += d
+        total.innerHTML = `$${tot}`
+    } else {
+        ca--
+        cant.innerHTML = ca
+        tot -= parseInt(catalogo[i].precio, 10)
+        total.innerHTML = `$${tot}`
+    }
+}
+
+function quitarCard(i, id) {
+    let a = document.getElementById(`cardCa${id}`)
+    let b = document.getElementById(`precio${id}`).innerHTML
+    let c = document.getElementById(`cantidadCard${id}`).value
+    cardsCa.removeChild(a)
+    tot -= parseInt(b)
+    total.innerHTML = `$${tot}`
+    ca -= parseInt(c)
+    cant.innerHTML = ca
+}
+
 let total = document.getElementById("total")
 let tot = 0
 total.innerHTML = tot
@@ -277,4 +312,10 @@ function sumarCarrito(id) {
         }
         i++
     }
+}
+
+let cerrar = document.getElementById("close")
+
+function cerrarCarrito() {
+    carrito.classList.toggle("showCarrito")
 }
