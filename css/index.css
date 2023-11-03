@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* header */
+
+.header {
+    height: 100px;
+    background-color: purple;
+    display: flex;
+    align-items: center;
+}
+
+.header>p {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.menu {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+}
+
+.menu>ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu>ul>li {
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.menu>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu>img {
+    position: absolute;
+    right: 45px;
+    cursor: pointer;
+}
+
+.menu>sup {
+    position: absolute;
+    top: 140px;
+    right: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* aside */
+
+aside {
+    float: left;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+
+aside>ul {
+    list-style: none;
+}
+
+aside>ul>li {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+aside>ul>li:last-child {
+    margin-bottom: 1rem;
+}
+
+aside>ul>li>span:last-child {
+    margin-left: 1rem;
+}
+
+/* section */
+
+section {
+    float: left;
+    width: fit-content;
+}
+
+.cards {
+    /*  display: grid;
+    grid-template-columns: repeat(7, 200px);
+    grid-template-rows: repeat(5, 350px);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin-left: 1rem;
+    margin-top: 1rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+#load {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    left: 50%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    width: 200px;
+    height: 400px;
+}
+
+.card>img {
+    object-fit: fill;
+    width: 100%;
+    height: 300px;
+}
+
+.ti {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ti>p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.inferior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.inferior>p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.inferior>img {
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+/* carrito */
+
+.carrito {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 70vh;
+    width: 30vw;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background-color: white;
+    clip-path: inset(0 0 0 100%);
+    -webkit-clip-path: inset(0 0 0 100%);
+    transition: ease-in-out 0.7s;
+    overflow-y: scroll;
+}
+
+.carrito>p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.showCarrito {
+    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+}
+
+.cardsCa {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+
+}
+
+.cardCa {
+    display: flex;
+    height: 130px;
+    width: 90%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.cardCa>img {
+    width: 100px;
+}
+
+.derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.derecha>p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.derecha>hr {
+    width: 100%;
+}
+
+.inferiorCa {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inferiorCa>p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.inferiorCa>span {
+    margin-left: 1rem;
+    cursor: pointer;
+    color: red;
+}
+
+.inferiorCa>p:last-child {
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.inputCard {
+    width: 40px;
+}
+
+.total {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.precio {
+    margin-left: 1rem;
+    display: flex;
+}
+
+.precio>span {
+    margin-left: 0.5rem;
+}
+
+.total>button {
+    margin-right: 1rem;
+}

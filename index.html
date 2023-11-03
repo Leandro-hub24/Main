@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlcoholSoft</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header class="header">
+        <p>AlcoholSoft</p>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <img src="images/carrito-de-compras.png" alt="" id="carri" onclick="showCarrito()"><sup id="cantCarrito"></sup>
+
+    </nav>
+
+    <main>
+
+        <aside>
+            <ul>
+                <li onclick="todosCard()"><span>Todos</span><span id="tod"></span></li>
+                <li onclick="accionCard('Acción')"><span>Acción</span><span id="acc"></span></li>
+                <li onclick="accionCard('Aventuras')"><span>Aventuras</span><span id="aven"></span></li>
+                <li onclick="accionCard('Horror')"><span>Horror</span><span id="horr"></span></li>
+                <li onclick="accionCard('Lucha')"><span>Lucha</span><span id="lu"></span></li>
+                <li onclick="accionCard('Multijugador')"><span>Multijugador</span><span id="mul"></span></li>
+                <li onclick="accionCard('Plataformas')"><span>Plataformas</span><span id="pla"></span></li>
+                <li onclick="accionCard('RPG')"><span>RPG</span><span id="rpg"></span></li>
+            </ul>
+        </aside>
+
+        <section>
+            <div class="cards" id="cards">
+                <!-- <div class="card">
+                    <img id="imagen" src="images/alan.jpg" alt="">
+                    <div class="ti">
+                        <p id="titulo">alan wake 2</p>
+                    </div>             
+                    <hr>
+                    <div class="inferior">
+                        <p id="precio">$20.000</p>
+                        <img src="images/anadir-al-carrito (1).png" alt="">
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <div class="carrito" id="carrito">
+        <p>Carrito de compras</p>
+        <div class="cardsCa" id="cardsCa">          
+        
+        </div>
+        <div class="total">
+            <div class="precio">
+                <p>Total a pagar: </p>
+                <span id="total"></span>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+    </div>
+
+
+    <footer>
+
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        inicioCarr()
+        showCard()
+        showCant('Todos', 'tod')
+        showCant('Acción', 'acc')
+        showCant('Aventuras', 'aven')
+        showCant('Horror', 'horr')
+        showCant('Lucha', 'lu')
+        showCant('Multijugador', 'mul')
+        showCant('Plataformas', 'pla')
+        showCant('RPG', 'rpg')
+    </script>
+</body>
+
+</html>
