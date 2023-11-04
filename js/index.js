@@ -322,3 +322,4 @@ let cerrar = document.getElementById("close")
 function cerrarCarrito() {
     carrito.classList.toggle("showCarrito")
 }
+
