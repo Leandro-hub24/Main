@@ -1,24 +1,24 @@
-const inicial = ([{ id: 1, urlImg: "alan.jpg", titulo: "Alan Wake 2", precio: ((Math.round(Math.random() * (50000 - 20000) + 20000))), genero: "Acción" },
-{ id: 2, urlImg: "brave.jpg", titulo: "Brave", precio: (~~(Math.random() * 100000)), genero: "Aventuras" },
-{ id: 3, urlImg: "duty.jpeg", titulo: "Call of Duty: Black Ops II", precio: (~~(Math.random() * 100000)), genero: "Multijugador" },
-{ id: 4, urlImg: "fallout.jpg", titulo: "Fallout 4 (GOTY)", precio: (~~(Math.random() * 100000)), genero: "RPG" },
-{ id: 5, urlImg: "final.jpg", titulo: "Lightning Returns: Final Fantasy XIII", precio: (~~(Math.random() * 100000)), genero: "RPG" },
-{ id: 6, urlImg: "lego.jpg", titulo: "LEGO: Marvel Super Heroes ", precio: (~~(Math.random() * 100000)), genero: "Plataformas" },
-{ id: 7, urlImg: "lies.jpg", titulo: "Lies of P ", precio: (~~(Math.random() * 100000)), genero: "Acción" },
-{ id: 8, urlImg: "metro.jpeg", titulo: "Metro Exodus", precio: (~~(Math.random() * 100000)), genero: "Aventuras" },
-{ id: 9, urlImg: "minecraft.jpeg", titulo: "Minecraft: Java Edition", precio: (~~(Math.random() * 100000)), genero: "Multijugador" },
-{ id: 10, urlImg: "mortal.jpg", titulo: "Mortal Kombat X", precio: (~~(Math.random() * 100000)), genero: "Plataformas" },
-{ id: 11, urlImg: "no_man.jpg", titulo: "No Man's Sky", precio: (~~(Math.random() * 100000)), genero: "Multijugador" },
-{ id: 12, urlImg: "party.jpg", titulo: "Party Animals", precio: (~~(Math.random() * 100000)), genero: "Acción" },
-{ id: 13, urlImg: "persona.jpg", titulo: "Persona 5 Royal ", precio: (~~(Math.random() * 100000)), genero: "Aventuras" },
-{ id: 14, urlImg: "plague.jpeg", titulo: "A Plague Tale: Innocence", precio: (~~(Math.random() * 100000)), genero: "Horror" },
-{ id: 15, urlImg: "resident.jpeg", titulo: "Resident Evil 4 (2005)", precio: (~~(Math.random() * 100000)), genero: "Horror" },
-{ id: 16, urlImg: "resident6.jpeg", titulo: "Resident Evil 6", precio: (~~(Math.random() * 100000)), genero: "Horror" },
-{ id: 17, urlImg: "street.jpg", titulo: "Street Fighter 6 Deluxe Edition", precio: (~~(Math.random() * 100000)), genero: "Lucha" },
-{ id: 18, urlImg: "witcher.jpg", titulo: "The Witcher 3: Wild Hunt", precio: (~~(Math.random() * 100000)), genero: "RPG" }
+const inicial = ([{ id: 1, imgurl: "alan.jpg", titulo: "Alan Wake 2", precio: ((Math.round(Math.random() * (50000 - 20000) + 20000))), genero: "Acción" },
+{ id: 2, imgurl: "brave.jpg", titulo: "Brave", precio: (~~(Math.random() * 100000)), genero: "Aventuras" },
+{ id: 3, imgurl: "duty.jpeg", titulo: "Call of Duty: Black Ops II", precio: (~~(Math.random() * 100000)), genero: "Multijugador" },
+{ id: 4, imgurl: "fallout.jpg", titulo: "Fallout 4 (GOTY)", precio: (~~(Math.random() * 100000)), genero: "RPG" },
+{ id: 5, imgurl: "final.jpg", titulo: "Lightning Returns: Final Fantasy XIII", precio: (~~(Math.random() * 100000)), genero: "RPG" },
+{ id: 6, imgurl: "lego.jpg", titulo: "LEGO: Marvel Super Heroes ", precio: (~~(Math.random() * 100000)), genero: "Plataformas" },
+{ id: 7, imgurl: "lies.jpg", titulo: "Lies of P ", precio: (~~(Math.random() * 100000)), genero: "Acción" },
+{ id: 8, imgurl: "metro.jpeg", titulo: "Metro Exodus", precio: (~~(Math.random() * 100000)), genero: "Aventuras" },
+{ id: 9, imgurl: "minecraft.jpeg", titulo: "Minecraft: Java Edition", precio: (~~(Math.random() * 100000)), genero: "Multijugador" },
+{ id: 10, imgurl: "mortal.jpg", titulo: "Mortal Kombat X", precio: (~~(Math.random() * 100000)), genero: "Plataformas" },
+{ id: 11, imgurl: "no_man.jpg", titulo: "No Man's Sky", precio: (~~(Math.random() * 100000)), genero: "Multijugador" },
+{ id: 12, imgurl: "party.jpg", titulo: "Party Animals", precio: (~~(Math.random() * 100000)), genero: "Acción" },
+{ id: 13, imgurl: "persona.jpg", titulo: "Persona 5 Royal ", precio: (~~(Math.random() * 100000)), genero: "Aventuras" },
+{ id: 14, imgurl: "plague.jpeg", titulo: "A Plague Tale: Innocence", precio: (~~(Math.random() * 100000)), genero: "Horror" },
+{ id: 15, imgurl: "resident.jpeg", titulo: "Resident Evil 4 (2005)", precio: (~~(Math.random() * 100000)), genero: "Horror" },
+{ id: 16, imgurl: "resident6.jpeg", titulo: "Resident Evil 6", precio: (~~(Math.random() * 100000)), genero: "Horror" },
+{ id: 17, imgurl: "street.jpg", titulo: "Street Fighter 6 Deluxe Edition", precio: (~~(Math.random() * 100000)), genero: "Lucha" },
+{ id: 18, imgurl: "witcher.jpg", titulo: "The Witcher 3: Wild Hunt", precio: (~~(Math.random() * 100000)), genero: "RPG" }
 ])
 
-var datos;
+/*var datos;
 var datosCompras;
 
 function ajax() {
@@ -40,11 +40,12 @@ function response() {
 	     alert(datos[i]["id"] + " " + datos[i]["titulo"])  
    } */
    
-   
+   /*
   }
  
 }
-
+*/
+/*
 function ajax1() {
   // De esta forma se obtiene la instancia del objeto XMLHttpRequest
     connection = new XMLHttpRequest();
@@ -64,19 +65,20 @@ function response1() {
 	     alert(datos[i]["id"] + " " + datos[i]["titulo"])  
    } */
    
-   
+   /*
   }
  
 }
-   
+*/
+/*   
 ajax();
 ajax1();
 
-
+*/
 
 let catalogo = inicial
 
-let compras = datosCompras
+//let compras = datosCompras
 
 
 
