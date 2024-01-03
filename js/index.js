@@ -1,4 +1,4 @@
-/*const inicial = ([{ id: 1, urlImg: "imagesJuegos/alan.jpg", titulo: "Alan Wake 2", precio: (~~(Math.random() * 100000)), genero: "Acción" },
+const inicial = ([{ id: 1, urlImg: "imagesJuegos/alan.jpg", titulo: "Alan Wake 2", precio: (~~(Math.random() * 100000)), genero: "Acción" },
 { id: 2, urlImg: "imagesJuegos/brave.jpg", titulo: "Brave", precio: (~~(Math.random() * 100000)), genero: "Aventuras" },
 { id: 3, urlImg: "imagesJuegos/duty.jpeg", titulo: "Call of Duty: Black Ops II", precio: (~~(Math.random() * 100000)), genero: "Multijugador" },
 { id: 4, urlImg: "imagesJuegos/fallout.jpg", titulo: "Fallout 4 (GOTY)", precio: (~~(Math.random() * 100000)), genero: "RPG" },
@@ -16,7 +16,7 @@
 { id: 16, urlImg: "imagesJuegos/resident6.jpeg", titulo: "Resident Evil 6", precio: (~~(Math.random() * 100000)), genero: "Horror" },
 { id: 17, urlImg: "imagesJuegos/street.jpg", titulo: "Street Fighter 6 Deluxe Edition", precio: (~~(Math.random() * 100000)), genero: "Lucha" },
 { id: 18, urlImg: "imagesJuegos/witcher.jpg", titulo: "The Witcher 3: Wild Hunt", precio: (~~(Math.random() * 100000)), genero: "RPG" }
-])*/
+])
 
 var datos;
 var datosCompras;
@@ -74,7 +74,7 @@ ajax1();
 
 
 
-let catalogo = datos
+let catalogo = inicial
 
 let compras = datosCompras
 
