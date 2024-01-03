@@ -1,4 +1,4 @@
-const inicial = ([{ id: 1, urlImg: "alan.jpg", titulo: "Alan Wake 2", precio: (~~(Math.random() * 100000)), genero: "Acción" },
+const inicial = ([{ id: 1, urlImg: "alan.jpg", titulo: "Alan Wake 2", precio: ((Math.round(Math.random() * (50000 - 20000) + 20000))), genero: "Acción" },
 { id: 2, urlImg: "brave.jpg", titulo: "Brave", precio: (~~(Math.random() * 100000)), genero: "Aventuras" },
 { id: 3, urlImg: "duty.jpeg", titulo: "Call of Duty: Black Ops II", precio: (~~(Math.random() * 100000)), genero: "Multijugador" },
 { id: 4, urlImg: "fallout.jpg", titulo: "Fallout 4 (GOTY)", precio: (~~(Math.random() * 100000)), genero: "RPG" },
